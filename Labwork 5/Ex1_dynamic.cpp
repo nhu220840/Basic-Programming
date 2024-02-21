@@ -10,7 +10,7 @@ int main(){
 
     //Kiem tra xem ko gian co du de luu tru ko?
     // - Neu ptr tra ve NULL chung to vung nho ko du de chua du lieu can luu -> ket thuc chuong trinh
-    // - Neu ko chung to bo nho da duoc cap phat thanh cong -> tiep tuc chuong trinh
+    // - Neu ko, chung to bo nho da duoc cap phat thanh cong -> tiep tuc chuong trinh
     if(ptr == NULL){
         printf("Error! memory not allocated.");
         exit(0);
@@ -28,11 +28,11 @@ int main(){
         //so sanh voi static array:
         //thuong khi nhap trong static array se co toan tu &a[i] de scanf
         //nhung o day ko co? tai sao?
-        //ban chat toan tu & se truy cap vao address cua cai o do de truyen value
-        //vay nen trong dynamic array ptr se truy cap truc tiep vao address de truyen value ma ko can thong qua &
+        //ban chat toan tu '&' se truy cap vao address cua cai o do de truyen value
+        //vay nen trong dynamic array ptr se truy cap truc tiep vao address de truyen value ma ko can thong qua toan tu '&'
     }
 
-    //* la toan tu giai tham chieu
+    //'*' la toan tu giai tham chieu
     //giai tham chieu la gi? 
     //tuc nghia la no se di den address do va xem tai address do thi value tuong ung la bao nhieu
     int max = *ptr, min = *ptr; //coi gtri cua phan tu dau tien la gtln, gtnn
