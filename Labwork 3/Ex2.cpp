@@ -25,7 +25,7 @@ bool checkPrime(int n){
         if(n % i == 0)
             return false;
     }
-    return n > 1;
+    return n > 1; //except case n = 1 is not prime number
 }
 
 int main(){
