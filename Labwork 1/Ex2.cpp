@@ -14,5 +14,5 @@ int main(){
     printf("A string entered: %s\n", str);
     
     char special_char = '@';
-    printf("Speacial char is: %c", special_char);
+    printf("Special char is: %c", special_char);
 }
