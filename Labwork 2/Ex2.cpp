@@ -4,7 +4,7 @@
 int main(){
     printf("Please enter 3 value: ");
     int a, b, c; scanf("%d %d %d", &a, &b, &c);
-    //Case 1:
+    //Method 1:
     int max = a, min = a;
 
     if(b > max) max = b;
@@ -16,7 +16,7 @@ int main(){
     printf("The minimum among these numbers is: %d\n", min);
     printf("The maximum among these numbers is: %d\n", max);
 
-    //Case 2:
+    //Method 2:
     printf("The minimum among these numbers is: %d\n", (int)fmin(fmin(a, b), c));
     printf("The maximum among these numbers is: %d\n", (int)fmax(fmax(a, b), c));
 }
