@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    printf("Please enter 6 integer: ");
+    printf("Please enter 6 integers: ");
     int a, b, c, d, e, f; scanf("%d %d %d %d %d %d", &a, &b, &c, &d, &e, &f);
     float D, Dx, Dy, x, y;
     D = a * e - b * d;

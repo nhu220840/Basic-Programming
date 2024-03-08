@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main(){
-    printf("Please enter 3 value: ");
+    printf("Please enter 3 values: ");
     int a, b, c; scanf("%d %d %d", &a, &b, &c);
     //Method 1:
     int max = a, min = a;

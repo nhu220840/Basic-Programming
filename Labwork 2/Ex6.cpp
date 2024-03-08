@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    printf("Please enter any month: ");
+    printf("Please enter a month: ");
     int daysOfMonth; scanf("%d", &daysOfMonth);
     switch (daysOfMonth){
         case 1: case 3: case 5: case 7: case 8: case 10: case 12:
