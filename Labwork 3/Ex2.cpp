@@ -33,9 +33,9 @@ int main(){
     printf("Please enter a natural number: ");
     int n; scanf("%d", &n);
     printf("All the prime numbers from 1 to %d are: ", n);
-    for(int i = 2; i <= n; i++){
-        if(isPrime[i]) printf("%d ", i);
-    }
+    // for(int i = 2; i <= n; i++){
+    //     if(isPrime[i]) printf("%d ", i);
+    // }
 
     // for(int i = 2; i <= n; i++){
     //     if(checkPrime(i)) 
@@ -43,14 +43,14 @@ int main(){
     // }
 
     //Method 3: Brute force (stupid =)) ):
-    // bool found = true;
-    // for(int i = 2; i <= n; i++){
-    //     for(int j = 2; j <= i - 1; j++){
-    //         if(i % j == 0) 
-    //             found = false;
-    //     }
-    //     if(found == true) 
-    //         printf("%d ", i);
-    //     found = true;
-    // }
+    bool found = true;
+    for(int i = 2; i <= n; i++){
+        for(int j = 2; j <= i - 1; j++){
+            if(i % j == 0) 
+                found = false;
+        }
+        if(found == true) 
+            printf("%d ", i);
+        found = true;
+    }
 }
