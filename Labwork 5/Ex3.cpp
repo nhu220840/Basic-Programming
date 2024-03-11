@@ -1,12 +1,29 @@
 #include <stdio.h>
 
-void bubbleSort(int a[], int n){
-    for(int i = 0; i < n - 1; i++){
-        for(int j = n - 1; j > i; j--){
-            if(a[j] < a[j - 1]){
-                int tmp = a[j];
-                a[j] = a[j - 1];
-                a[j - 1] = tmp;
+// void bubbleSort(int a[], int n){
+//     for(int i = 0; i < n - 1; i++){
+//         for(int j = n - 1; j > i; j--){
+//             if(a[j] < a[j - 1]){
+//                 int tmp = a[j];
+//                 a[j] = a[j - 1];
+//                 a[j - 1] = tmp;
+//             }
+//         }
+//     }
+// }
+
+void bubbleSort(int a[], int n){ //optimized
+    bool isSorted = false; 
+
+    while(!isSorted){
+        isSorted = true;
+        for(int i = 0; i < n - 1; i++){
+            if(a[i] > a[i + 1]){
+                //swap(a[i], a[i + 1]);
+                int tmp = a[i];
+                a[i] = a[i + 1];
+                a[i + 1] = tmp;
+                isSorted = false;
             }
         }
     }
