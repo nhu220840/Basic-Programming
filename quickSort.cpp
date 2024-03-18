@@ -3,7 +3,7 @@
 using namespace std;
 using ll = long long;
 
-int lomuto(int a[], int l, int r){
+int lomutoPartition(int a[], int l, int r){
     int pos = l - 1, pivot = a[r];
     for(int i = l; i < r; i++){
         if(a[i] <= pivot){
@@ -16,7 +16,7 @@ int lomuto(int a[], int l, int r){
     return pos;
 }
 
-int hoare(int a[], int l, int r){
+int hoarePartition(int a[], int l, int r){
     int pivot = a[l];
     int i = l - 1, j = r + 1;
     while(true){
@@ -37,7 +37,7 @@ int hoare(int a[], int l, int r){
 
 void quickSort(int a[], int l, int r){
     if(l < r){ 
-        int p = lomuto(a, l, r);
+        int p = lomutoPartition(a, l, r);
         quickSort(a, l, p - 1);
         quickSort(a, p + 1, r);        
     }
@@ -45,7 +45,7 @@ void quickSort(int a[], int l, int r){
 
 void quickSort2(int a[], int l, int r){
     if(l >= r) return;
-    int p = hoare(a, l, r);
+    int p = hoarePartition(a, l, r);
     quickSort2(a, l, p);
     quickSort2(a, p + 1, r);
 }
