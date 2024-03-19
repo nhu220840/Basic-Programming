@@ -25,7 +25,7 @@ int hoarePartition(int a[], int l, int r){
         }while(a[i] < pivot);
 
         do{
-            j++;
+            j--;
         }while(a[j] > pivot);
 
         if(i < j){
