@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 
 //Method 1: Sieve of Eratosthenes:
 bool isPrime[1000007];
