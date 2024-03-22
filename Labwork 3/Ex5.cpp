@@ -3,7 +3,7 @@
 int main(){
     printf("Please enter an integer: ");
     long long n; scanf("%lld", &n);
-    printf("Fibonacci series up to n: ");
+    printf("Fibonacci series up to %d: ", n);
     if(n == 0) printf("0");
     else{
         printf("0 1 ");
