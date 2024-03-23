@@ -46,7 +46,7 @@ int main(){
     //Method 3: Brute force (stupid =)) ):
     bool found = true;
     for(int i = 2; i <= n; i++){
-        for(int j = 2; j <= i - 1; j++){
+        for(int j = 2; j <= sqrt(i); j++){
             if(i % j == 0) 
                 found = false;
         }
