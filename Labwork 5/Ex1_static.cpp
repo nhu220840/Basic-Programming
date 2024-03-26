@@ -8,13 +8,13 @@ int main(){
     for(int i = 0; i < n; i++){
         scanf("%d", &a[i]);
     }
-    int max = a[0], min = a[0];
+    int max_element = a[0], min_element = a[0];
     for(int i = 1; i < n; i++){
-        if(a[i] > max)
-            max = a[i];
-        if(a[i] < min)
-            min = a[i];
+        if(a[i] > max_element)
+            max_element = a[i];
+        if(a[i] < min_element)
+            min_element = a[i];
     }
-    printf("The minimum in the given series is: %d\n", min);
-    printf("The maximum in the given series is: %d\n", max);
+    printf("The minimum in the given series is: %d\n", min_element);
+    printf("The maximum in the given series is: %d\n", max_element);
 }
