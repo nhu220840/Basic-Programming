@@ -13,7 +13,7 @@ int main(){
     // - Neu ko, chung to bo nho da duoc cap phat thanh cong -> tiep tuc chuong trinh
     if(ptr == NULL){
         printf("Error! memory not allocated.");
-        exit(0);
+        return 0;
     }
 
     //Co 2 khai niem can phan biet:
