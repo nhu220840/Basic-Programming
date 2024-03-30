@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
     printf("Please enter the number of elements in the series: ");
@@ -14,6 +15,8 @@ int main(){
             max_element = a[i];
         if(a[i] < min_element)
             min_element = a[i];
+        // max_element = fmax(max_element, a[i]);
+        // min_element = fmin(min_element, a[i]);
     }
     printf("The minimum in the given series is: %d\n", min_element);
     printf("The maximum in the given series is: %d\n", max_element);
