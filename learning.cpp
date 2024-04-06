@@ -14,8 +14,12 @@ int main(){
     int e = a * b;
     float f = (float)a / b;
     int g = a % b;
-    // a++; //a = a + 1;
-    // b--; //a = a - 1; 
+    printf("%d %d %d %.2f %d\n", c, d, e, f, g);
+
+    printf("%d", 6 != 6);
+
+    a++; //a = a + 1;
+    b--; //a = a - 1; 
 
     //neu ++, -- o truoc thi se in ra truoc roi moi ++, --
     printf("The value of a is: %d\n", a++); // in ra 9, a = 10
@@ -45,8 +49,14 @@ int main(){
         printf("The day in week\n");
     }
 
+    switch(day){
+        case 1 : printf("Sunday\n"); break;
+        case 2 : printf("Monday\n"); break;
+        case 3 : printf("Tuesday\n"); break;
+        default : printf("The day in week\n"); break;
+    }
 
-    printf("%d %d %d %.2f %d\n", c, d, e, f, g);
+    //printf("%d %d %d %.2f %d\n", c, d, e, f, g);
     //goto loop;
     printf("%d %d\n", a, b);
 

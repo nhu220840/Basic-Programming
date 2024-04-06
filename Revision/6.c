@@ -6,7 +6,8 @@ int main(){
 
     x = 3, p = 6, p = &x;
     
-    *p = 9;
+    //*p = 9;
+    x = 9;
 
     printf("%d", x);
     printf("%d", *p);
