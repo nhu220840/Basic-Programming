@@ -3,13 +3,13 @@
 
 int main(){
     char *str = "His";
-
     int i;
 
     for(i = 0; i < strlen(str); i++)
 
-    //printf("%s", str++);
+    printf("%s", str++);
+    //printf("%c", str);
     
     //printf("%c", *str++);
-    printf("%c", *(str + 1));
+    //printf("%c", *(str + 1));
 }
