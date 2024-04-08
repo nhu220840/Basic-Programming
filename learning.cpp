@@ -9,11 +9,13 @@ int main(){
     printf("Hello world\n");
 
     int a = 9, b = 265;
-    int c = a + b; //31
+    long long c = a + b; //31
     int d = a - b; //11
     int e = a * b;
-    float f = (float)a / b;
-    int g = a % b;
+    int f = a / b;
+    int g = a % b;  //11 % 2 = 1
+    int luythua = pow(2, 3); //2^3
+    //int 
     printf("%d %d %d %.2f %d\n", c, d, e, f, g);
 
     printf("%d", 6 != 6);

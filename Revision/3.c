@@ -2,6 +2,7 @@
 
 int main(){
     int i = 10;
-    printf("%d, ", i++); 
+    //printf("%d %d", i++, ++i);
+    printf("%d, ", i++);
     printf("%d", ++i);
 }

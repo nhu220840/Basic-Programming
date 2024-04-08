@@ -9,8 +9,7 @@ int isEven(int x){
 }
 
 int sum(int x, int y){
-    // int sum = 0;
-    // sum = x + y;
+    // int sum = x + y;
     // return sum;
     return x + y;
 }
@@ -21,10 +20,10 @@ void hello(){
 
 int main(){
     int n; scanf("%d", &n);
-    int sum = 0;
+    //int sum = 0;
     int i;
     for(i = 1; i <= n; i++)
-        sum += i;
+        //sum += i;
         //printf("hello\n");
     printf("%d\n", sum);
 
@@ -56,4 +55,5 @@ int main(){
     else printf("It is odd\n");
     //printf("%d", sum(x, y));
     hello();
+    printf("%d", sum(2, 2));
 }

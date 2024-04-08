@@ -7,6 +7,5 @@ int main(){
     else
         printf("how are you");
     printf("hello");
-    return 0;
-    //hihello
+    return 0; //hihello
 }
