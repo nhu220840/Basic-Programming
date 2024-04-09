@@ -38,7 +38,7 @@ int main(){
     printf("This\'s our C programming course.\n");
     printf("This\'s our C programming course.\n");
 
-    char arr2[100] = "H ello USTH";
+    char arr2[100] = "Hello USTH";
     printf("%d\n", strlen(arr2));
 
     // n = 5
