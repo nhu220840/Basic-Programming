@@ -6,7 +6,7 @@ int main(){
     switch (n + 2){
         case 1 : printf("Sunday"); break;
         case 2 : printf("Monday"); break;
-        default: printf("Not a day in week\n"); break;
+        default: printf("Not a day in week\n"); break; 
     }
 
     //int a = 40, b = 4;

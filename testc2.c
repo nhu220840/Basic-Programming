@@ -1,9 +1,14 @@
 #include <stdio.h>
-int main(){
-    char arr[15] = "Hello World";
-    char *ptr;
-    ptr = arr;
-    printf("%c\n", ptr[1]);
+
+int func(int *a, int *b){
+    *a = *a + *b;
+    *b = *a - *b;
+    *a = *a - *b;
     
-    return 0;
+}
+
+int main(){
+    int x = 10, y = 20;
+    func(&x, &y);
+    printf("%d %d", x, y);
 }
