@@ -1,14 +1,8 @@
 #include <stdio.h>
 
-int func(int *a, int *b){
-    *a = *a + *b;
-    *b = *a - *b;
-    *a = *a - *b;
-    
-}
-
 int main(){
-    int x = 10, y = 20;
-    func(&x, &y);
-    printf("%d %d", x, y);
+    char arr[15] = "Hello World";
+    char *ptr; //doi thanh con tro kieu char 
+    ptr = arr;
+    printf("%c", ptr[1]);
 }
