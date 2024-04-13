@@ -8,7 +8,7 @@ int main(){
    
     if(ptr == NULL){
         printf("Error! memory not allocated.");
-        exit(0);
+        return 0;
     }
     
     printf("Enter the elements of array: ");
@@ -21,4 +21,5 @@ int main(){
     }
 
     free(ptr); 
+    return 0;
 }
