@@ -1,25 +1,11 @@
 #include <stdio.h>
+#include "GCD.h"
 
-void bubbleSort(int a[], int n){
-    for(int i = 0; i < n - 1; i++){
-        for(int j = 0; j < i; j++){
-            if(a[j] > a[j + 1]){
-                int tmp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = tmp;
-            }
-        }
-    }
-}
+//gcc Ex4.c GCD.c -o main
+//./main
 
 int main(){
-    int n; scanf("%d", &n);
-    int a[n];
-    for(int i = 0; i < n; i++){
-        scanf("%d", &a[i]);
-    }
-    bubbleSort(a, n);
-    for(int i = 0; i < n; i++){
-        printf("%d ", a[i]);
-    }
+    printf("Enter 2 positive integers number: ");
+    int a, b; scanf("%d %d", &a, &b);
+    printf("The Greatest Common Divisor of %d and %d is: %d", a, b, gcd(a, b));    
 }

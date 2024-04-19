@@ -2,7 +2,8 @@
 #include <math.h>
 
 int main(){
-    int x; scanf("%d", &x);
-    int res = 1 * pow(x, 2) + 2 * x + 1;
-    printf("%d", res);
+    printf("Enter a number: ");
+    double x; scanf("%lf", &x);
+    double res = 1 * pow(x, 2) + 2 * x + 1;
+    printf("The result of equation is: %.2lf", res);
 }
