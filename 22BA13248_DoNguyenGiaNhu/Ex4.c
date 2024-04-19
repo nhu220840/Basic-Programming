@@ -2,7 +2,7 @@
 #include "GCD.h"
 
 //gcc Ex4.c GCD.c -o main
-//./main
+//./main    
 
 int main(){
     printf("Enter 2 positive integers number: ");
