@@ -13,5 +13,8 @@ int main(){
         case 2:
             printf("The number of days in that month are: 28 or 29");
             break;
+        default:
+            printf("Invalid");
+            break;
     }
 }
