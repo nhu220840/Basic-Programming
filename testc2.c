@@ -1,10 +1,19 @@
 #include <stdio.h>
 
 int main(){
-    int n; scanf("%d", &n);
-    float sum = 0;
-    for(int i = 1; i <= n; i++){
-        sum += (float)1/i; 
-    }
-    printf("%f ", sum);
+    float n;
+    int result;
+    do{
+        printf("Enter a positive number: ");
+        result = scanf("%f", &n);
+        if(result != 1 || n <= 0){
+            printf("Invalid input!!! Please enter a positive number.\n");
+            // Clear input buffer
+            while (getchar() != '\n');
+        }
+        else{
+            break;
+        }
+    } while(1);
+    printf("A positive number is: %f", n);
 }
