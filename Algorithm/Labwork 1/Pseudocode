@@ -1,0 +1,56 @@
+Ex1:
+Input: Read 3 numbers
+Output: Display the largest numbers
+Process:
+BEGIN
+    Get a, b, c 
+    Set max <- a
+    if b > max:
+        max = b
+    if c > max:
+        max = c
+    Display max, it is a largest number 
+END
+
+Ex2:
+Input: Read a positive integer n
+Output: Product of all positive integer <= n
+Process:
+BEGIN
+    Get n 
+    Set product <- 1
+    i <- 1
+    while i <= n
+        product = product * i
+        i = i + 1
+    endwhile
+    Display product
+END
+
+Ex3:
+Input: Read 2 number a, b
+Output: Display all odd numbers between a and b
+Process:
+BEGIN
+    Get a, b 
+    for i <- a to b do
+        if i % 2 != 0
+            print i
+    endfor
+END
+
+Ex4: 
+Input: Read a positive integer n
+Output: n is a prime number or not?
+Process:
+BEGIN
+    Get n
+    for i <- 2 to sqrt(n) do
+        if n % 1 == 0
+            print "n is not a prime number"
+    endfor
+    print "n is prime number"
+END
+
+Ex5:
+Input: 
