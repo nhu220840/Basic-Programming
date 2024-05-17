@@ -9,7 +9,7 @@ BEGIN
         max <- b
     if c > max
         max <- c
-    Print max 
+    print max 
 END
 
 Ex2:
@@ -24,7 +24,7 @@ BEGIN
         product <- product * i
         i <- i + 1
     endwhile
-    Print product
+    print product
 END
 
 Ex3:
@@ -63,7 +63,7 @@ BEGIN
         if i % 2 != 0
             count_odd <- count_odd + 1
     endfor
-    Print count_odd
+    print count_odd
 END
 
 Ex6:
