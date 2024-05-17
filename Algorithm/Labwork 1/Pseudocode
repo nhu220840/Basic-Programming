@@ -33,7 +33,9 @@ Output: Display all odd numbers between a and b
 Process:
 BEGIN
     Get a, b
-    for i <- a to b do
+    Set min_num <- min(a, b)
+    Set max_num <- max(a, b)
+    for i <- min_num to max_num do
         if i % 2 != 0
             print i
     endfor
@@ -48,8 +50,10 @@ BEGIN
     for i <- 2 to sqrt(n) do
         if n % i == 0
             print "n is not a prime number"
+            return
     endfor
     print "n is prime number"
+    return
 END
 
 Ex5:
