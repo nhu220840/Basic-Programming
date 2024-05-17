@@ -5,11 +5,11 @@ Process:
 BEGIN
     Get a, b, c 
     Set max <- a
-    if b > max:
-        max = b
-    if c > max:
-        max = c
-    Display max, it is a largest number 
+    if b > max
+        max <- b
+    if c > max
+        max <- c
+    Print max 
 END
 
 Ex2:
@@ -19,12 +19,12 @@ Process:
 BEGIN
     Get n 
     Set product <- 1
-    i <- 1
+    Set i <- 1
     while i <= n
-        product = product * i
-        i = i + 1
+        product <- product * i
+        i <- i + 1
     endwhile
-    Display product
+    Print product
 END
 
 Ex3:
@@ -32,7 +32,7 @@ Input: Read 2 number a, b
 Output: Display all odd numbers between a and b
 Process:
 BEGIN
-    Get a, b 
+    Get a, b
     for i <- a to b do
         if i % 2 != 0
             print i
@@ -46,11 +46,75 @@ Process:
 BEGIN
     Get n
     for i <- 2 to sqrt(n) do
-        if n % 1 == 0
+        if n % i == 0
             print "n is not a prime number"
     endfor
     print "n is prime number"
 END
 
 Ex5:
-Input: 
+Input: Read a positive integer n
+Output: Display the numbers of all odd numbers from 1 to n
+Process:
+BEGIN
+    Get n
+    Set count_odd <- 0
+    for i <- 1 to n do
+        if i % 2 != 0
+            count_odd <- count_odd + 1
+    endfor
+    Print count_odd
+END
+
+Ex6:
+Input: Read an input from keyboard
+Output: Stop if user enters right a positive number
+Process:
+BEGIN
+    While true:
+        Get n
+        if n > 0
+            print n
+            break
+        else
+            print "INVALID!!! Try again\n"
+    endwhile
+END
+
+Ex7: 
+Input: Read an input from keyboard
+Output: Stop if user enters right a positive number
+BEGIN
+    Set count_wrong_inp <- 0
+    While true:
+        Get n
+        if n > 0
+            print n
+            break
+        else
+            count_wrong_inp <- count_wrong_inp + 1
+            print "INVALID!!! Try again\n"
+    endwhile
+    print count_wrong_inp
+END
+
+Ex8: 
+Input: Read an input from keyboard
+Output: Stop if user enters right a positive number or enters wrong 5 times
+BEGIN
+    Set count_wrong_inp <- 0
+    While true:
+        Get n
+        if n > 0
+            print n
+            break
+        else
+            count_wrong_inp <- count_wrong_inp + 1
+            print "INVALID!!! Try again\n"
+        if count_wrong_inp == 5
+            print "You have entered wrong 5 times. Your account is locked !!!"
+            return
+    endwhile
+    print count_wrong_inp
+    return 
+END
