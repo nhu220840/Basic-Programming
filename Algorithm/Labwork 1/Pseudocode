@@ -33,9 +33,11 @@ Output: Display all odd numbers between a and b
 Process:
 BEGIN
     Get a, b
-    Set min_num <- min(a, b)
-    Set max_num <- max(a, b)
-    for i <- min_num to max_num do
+    if a < b 
+        tmp = a
+        a = b
+        b = tmp
+    for i <- a to b do
         if i % 2 != 0
             print i
     endfor
