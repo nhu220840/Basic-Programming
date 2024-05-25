@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//Nhap vao inch
+//Doi tu inch sang centimeter
+
 int main(){
     printf("Enter the number of inches: ");
     float inch; scanf("%f", &inch);

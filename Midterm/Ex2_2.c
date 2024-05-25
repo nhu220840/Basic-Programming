@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+//Nhap vao so n
+//Tinh giai thua cua n
+
 int main(){
     printf("Enter a number: ");
     int n; scanf("%d", &n);
