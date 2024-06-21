@@ -1,0 +1,230 @@
+1. Factorial of the number n 
+
+- Recursive algorithm
+int factorial(int n){
+    if n < 0 
+        return -1
+    if n == 0 
+        return 1
+    return n * factorial(n - 1)
+}
+
+- Analyze
+T(n) = 1 + T(n - 1)
+T(n - 1) = 1 + T(n - 2)
+T(n - 2) = 1 + T(n - 3)
+...
+T(n - k) = 1 + T(n - k - 1)
+k = n => T(0) = 1
+=> T(n) = 1 + 1 + 1 +...+ 1 = n + 1
+=> O(n)
+
+2. Merge-Sort
+
+- Recursive algorithm
+int merge(int a[], int l, int mid, int r){
+    int n1 <- mid - l + 1, n2 <- r - mid
+    int left[n1], right[n2]
+    for i <- 0 to n1 - 1 do
+        left[i] <- a[l + i]
+    endfor
+    for i <- 0 to n2 - 1 do
+        right[i] <- a[mid + 1 + i]
+    endfor
+
+    int idx <- l, i <- 0, j <- 0
+    while i < n1 and j < n2 do
+        if left[i] < right[j]
+            a[idx] <- left[i]
+            idx <- idx + 1
+            i <- i + 1
+        else
+            a[idx] <- right[j]
+            idx <- idx + 1
+            j <- j + 1
+    endwhile
+
+    while i < n1 do
+        a[idx] <- left[i]
+        idx <- idx + 1
+        i <- i + 1
+    endwhile
+
+    while i < n2 do
+        a[idx] <- right[j]
+        idx <- idx + 1
+        j <- j + 1
+    endwhile
+}
+
+void mergeSort(int a[], int l, int r){
+    if l < r
+        int mid <- (l + r) / 2
+        mergeSort(a, l, mid)
+        mergeSort(a, mid + 1, r)
+        merge(a, l, mid, r)
+}
+
+- Analyze
+T(n) = 2*T(n / 2) + c*n (c is a constant)
+T(n) = c if n = 1
+
+=> O(nlogn)
+
+3. Compute power
+
+- Recursive algorithm
+int power(int b, int b){
+    if n == 0
+        return 1
+    return b * power(b, n - 1)
+}
+
+- Analyze
+T(n) = 1 + T(n - 1)
+T(n - 1) = 1 + T(n - 2)
+T(n - 2) = 1 + T(n - 3)
+...
+T(n - k) = 1 + T(n - k - 1)
+k = n => T(0) = 1
+=> T(n) = 1 + 1 + 1 +...+ 1 = n + 1
+=> O(n)
+
+4. A smart solution, recursive squaring (Fast Power-Exponentiation by Squaring)
+
+- Recursive algorithm
+int bin_pow(int b, int n){
+    if n == 0 return 1
+    int x = bin_pow(b, n / 2)
+    if n % 2 == 0
+        return x * x
+    else
+        return x * x * b
+}
+
+- Analyze
+T(n) = O(1) + T(n / 2)
+T(0) = O(1)
+
+=> O(logn)
+
+4. Fibonacci sequence problem
+
+- Recursive algorithm
+int f(int n){
+    if n <= 1 
+        return 1
+    return f(n - 1) + f(n - 2)
+}
+
+- Analyze
+T(n) = T(n - 1) + T(n - 2)
+T(n - 1) = T(n - 2) + T(n - 3)
+...
+T(2) = T(1) + T(0) = 2
+T(0) = T(1) = 1
+
+=> T(n) = 1 + 1 + 1 + ... + 1 = n
+=> O(n)
+
+5. Linear search problem
+
+- Recursive algorithm
+void linearSearch(string N[], string T[], int n, string targetName, int index = 0){
+    if index >= n 
+        print "Not Found"
+        return
+    if N[index] == targetName
+        print T[n]
+        return 
+    return linearSearch(N, T, n, targetName, index + 1)
+}
+
+- Analyze
+T(n) = 1 + T(n - 1)
+T(n - 1) = 1 + T(n - 2)
+T(n - 2) = 1 + T(n - 3)
+...
+T(n - k) = 1 + T(n - k - 1)
+k = n => T(0) = 1
+=> T(n) = 1 + 1 + 1 +...+ 1 = n + 1
+=> O(n)
+
+6. Find largest problem
+
+- Recursive algorithm
+long largestNumber(long a[], int n, int index = 0, long maxNum = -1e9){
+    if index >= n 
+        return maxNum
+    if a[index] > maxNum
+        maxNum <- a[index]
+    return largestNumber(a, n, maxNum, index + 1)
+}
+
+- Analyze
+T(n) = 1 + T(n - 1)
+T(n - 1) = 1 + T(n - 2)
+T(n - 2) = 1 + T(n - 3)
+...
+T(n - k) = 1 + T(n - k - 1)
+k = n => T(0) = 1
+=> T(n) = 1 + 1 + 1 +...+ 1 = n + 1
+=> O(n)
+
+7. Binary search problem
+
+- Recursive algorithm
+bool binarySearch(int a[], int left, int right, int targetNum){
+    if left > right 
+        return false
+    int mid = (left + right) / 2
+    if a[mid] == targetNum
+        return true
+    else if a[mid] > targetNum
+        return binarySearch(a, left, mid - 1, targetNum)
+    else
+        return binarySearch(a, mid + 1, right, targetNum)
+}
+
+- Analyze
+T(n) = T(n / 2) + c (c is an constant) if n > 1
+T(n) = c if n = 1
+
+=> O(logn)
+
+8. Greatest common divisor (GCD)
+
+- Recursive algorithm
+int gcd(int a, int b){
+    if b == 0
+        return a
+    return gcd(b, a % b)
+}
+
+- Analyze
+O(logn)
+
+
+9. Selection Sort
+
+- Recursive algorithm
+void selectionSort(int arr[], int n, int index = 0){
+    if index == n
+        return
+
+    minIndex = index
+    for i from index + 1 to n - 1
+        if arr[i] < arr[minIndex]
+            minIndex = i
+    swap(arr[index], arr[minIndex])
+    selectionSort(arr, n, index + 1)
+}
+
+- Analyze
+O(n^2)
+
+
+
+
+
+
