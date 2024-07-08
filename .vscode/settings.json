@@ -59,6 +59,7 @@
   "files.associations": {
     "*.cpp": "cpp",
     "random": "cpp",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "ranges": "c"
   }
 }

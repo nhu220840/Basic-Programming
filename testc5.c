@@ -12,7 +12,6 @@ Student enter(){
     Student x;
     printf("Enter your name: ");
     gets(x.name);
-    getchar();
     printf("Enter ID: ");
     scanf("%s", x.ID);
     printf("Enter your gpa: ");
@@ -28,6 +27,7 @@ void output(Student x){
 
 int main(){
     int n; scanf("%d", &n);
+    getchar();
     Student listOfStudents[n];
     for(int i = 0; i < n; i++){
         printf("The information of student %d:\n", i + 1);

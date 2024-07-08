@@ -1,18 +1,30 @@
 #include <stdio.h>
-#include <math.h>
-
-int isPrime(long long n){
-    for(int i = 2; i <= sqrt(n); i++){
-        if(n % i == 0)
-            return 0;
-    }
-    return n > 1;
-}
+#include <stdlib.h>
 
 int main(){
-    long long n; scanf("%lld", &n);
-    if(isPrime(n))
-        printf("YES");
-    else 
-        printf("NO");
+    int n; scanf("%d", &n);
+    int *ptr = (int *)malloc(sizeof(int) * n);
+    if(ptr == NULL){
+        printf("Error!");
+        return 0;
+    }
+    for(int i = 0; i < n; i++){
+        scanf("%d", ptr + i);
+    }
+
+    int max = *ptr, min = *ptr;
+    for(int i = 0; i < n; i++){
+        if(*(ptr + i) > max)
+            max = *(ptr + i);
+        if(*(ptr + i) < min)
+            min = *(ptr + i);
+    }
+    printf("Min = %d\nMax = %d\n", min, max);
+
+    int sum = 0;
+    for(int i = 0; i < n; i++){
+        sum += *(ptr + i);
+    }
+    float avr = (float)sum / n;
+    printf("Average: %f", avr);
 }

@@ -1,25 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
-// a = 2, b = 1
-// a = a + b
-// a = 3
-// b = a - b
-// b = 2
-// a = a - b
-// a = 1
-int main() {
-  int X, Y, Z, T;
-  cin >> X >> Y >> Z >> T;
+using ll = long long;
 
-  if ((T - 2 * Z * Y) % (2 * Y + X) != 0) {
-    cout << "No solution";
-    return 0;
-  }
+ll largestNumber(ll a[], int n, int index, ll maxNum = -1e9){
+    if(index >= n)
+        return maxNum;
+    if(a[index] > maxNum)
+        maxNum = a[index];
+    return largestNumber(a, n, maxNum, index + 1);
+}
 
-  int N = (T - 2 * Z * Y) / (2 * Y + X);
-
-  cout << N;
-
-  return 0;
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n; cin >> n;
+    ll a[n];
+    for(ll &x : a) cin >> x;
+    cout << largestNumber(a, n, 0);
 }

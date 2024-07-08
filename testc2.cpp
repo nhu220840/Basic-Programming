@@ -34,7 +34,7 @@ void Fibo(){
     }
 }
 
-
+    
 int main(){
     Fibo();
     int t; cin >> t;

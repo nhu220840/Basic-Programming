@@ -1,28 +1,31 @@
 #include <stdio.h>
-#include <math.h>
-#define ll long long
+#include <stdlib.h>
 
-ll countDivisor(int n){
-    ll cnt = 0;
-    for(int i = 1; i <= sqrt(n); i++){
-        if(n % i == 0){
-            cnt++;
-            if(i != n / i){
-                cnt++;
-            }
+void insertionSort(int *a, int n){
+    for(int i = 1; i < n; i++){
+        int pos = i - 1, value = a[i];
+        while(pos >= 0 && a[pos] > value){
+            a[pos + 1] = a[pos];
+            pos--;
         }
+        a[pos + 1] = value;
     }
-    return cnt;
 }
 
 int main(){
-    int t; scanf("%d", &t);
-    while(t--){
-        ll count_sum_divisor = 0;
-        int l, r; scanf("%d %d", &l, &r);
-        for(int i = l; i <= r; i++){
-            count_sum_divisor += countDivisor(i);
-        }
-        printf("%lld\n", count_sum_divisor);
+    int n; scanf("%d", &n);
+    int *ptr = (int *)malloc(sizeof(int) * n);
+    if(ptr == NULL){
+        printf("Error");
+        return 0;
     }
+    for(int i = 0; i < n; i++){
+        scanf("%d", ptr + i);        
+    }
+    
+    insertionSort(ptr, n);
+    for(int i = 0; i < n; i++){
+        printf("%d ", *(ptr + i));
+    }
+
 }
