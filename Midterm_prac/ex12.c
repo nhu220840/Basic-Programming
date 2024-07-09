@@ -8,7 +8,7 @@ int main(){
             scanf("%d", &a[i][j]);
         }
     }
-    printf("Tranpose matrix:\n");
+    printf("Transpose matrix:\n");
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             printf("%d ", a[j][i]);
